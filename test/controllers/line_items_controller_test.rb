@@ -20,7 +20,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
       post line_items_url, params: { product_id: products(:ruby).id }
     end
 
-    assert_redirected_to cart_url(LineItem.last.cart)
+    assert_redirected_to store_index_url
 
     follow_redirect!
 
